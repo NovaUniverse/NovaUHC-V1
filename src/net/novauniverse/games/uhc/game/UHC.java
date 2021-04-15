@@ -10,7 +10,6 @@ import org.bukkit.Difficulty;
 import org.bukkit.GameMode;
 import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.Sound;
 import org.bukkit.block.Block;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Firework;
@@ -31,6 +30,8 @@ import net.novauniverse.games.uhc.NovaUHC;
 import net.zeeraa.novacore.commons.log.Log;
 import net.zeeraa.novacore.commons.utils.Callback;
 import net.zeeraa.novacore.spigot.NovaCore;
+import net.zeeraa.novacore.spigot.abstraction.VersionIndependantUtils;
+import net.zeeraa.novacore.spigot.abstraction.enums.VersionIndependantSound;
 import net.zeeraa.novacore.spigot.language.LanguageManager;
 import net.zeeraa.novacore.spigot.module.modules.game.Game;
 import net.zeeraa.novacore.spigot.module.modules.game.GameEndReason;
@@ -283,7 +284,7 @@ public class UHC extends Game implements Listener {
 				PlayerUtils.clearPlayerInventory(p);
 				PlayerUtils.resetPlayerXP(p);
 				p.setGameMode(GameMode.SPECTATOR);
-				p.playSound(p.getLocation(), Sound.WITHER_DEATH, 1F, 1F);
+				VersionIndependantUtils.get().playSound(p, p.getLocation(), VersionIndependantSound.WITHER_DEATH, 1F, 1F);
 
 				Firework fw = (Firework) p.getLocation().getWorld().spawnEntity(p.getLocation(), EntityType.FIREWORK);
 				FireworkMeta fwm = fw.getFireworkMeta();

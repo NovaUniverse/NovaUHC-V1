@@ -149,6 +149,13 @@
 		<dependency>
 			<groupId>net.zeeraa.novacore</groupId>
 			<artifactId>novacore-spigot</artifactId>
+			<version>1.1.0-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>net.zeeraa.novacore</groupId>
+			<artifactId>novacore-gameengine</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 			<scope>provided</scope>
 		</dependency>

@@ -2,5 +2,5 @@ name: NovaUHC
 main: net.novauniverse.games.uhc.NovaUHC
 description: Novauniverse UHC
 version: 1.0
-depend: [NovaCore]
+depend: [NovaCore, NovaCoreGameEngine]
 softdepend: [NovaGamesTarget]
