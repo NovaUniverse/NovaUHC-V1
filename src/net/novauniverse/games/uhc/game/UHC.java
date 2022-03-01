@@ -70,7 +70,7 @@ public class UHC extends Game implements Listener {
 	public UHC() {
 		super(NovaUHC.getInstance());
 	}
-	
+
 	@Override
 	public String getName() {
 		return "uhc";
@@ -385,7 +385,7 @@ public class UHC extends Game implements Listener {
 	public WorldPreGenerator getWorldPreGenerator() {
 		return worldPreGenerator;
 	}
-	
+
 	@EventHandler(priority = EventPriority.NORMAL)
 	public void onEntityRegainHealth(EntityRegainHealthEvent e) {
 		if (e.getEntity() instanceof Player) {
